@@ -44,13 +44,11 @@
         b.direct.defaultDictionary = b.mergeSets(defaultDictionary, b.getUpperCaseDictionary(defaultDictionary));
         b.data = {};
 
-        if (dictionaries) {
-            for (var key in dictionaries) {
-                if (dictionaries.hasOwnProperty(key)) {
-                    b.direct[key] = b.mergeSets(defaultDictionary, b.getUpperCaseDictionary(dictionaries[key]));
-                }
-            }
+        if (window.BuninDictionaries) {
+            b.initSets(window.BuninDictionaries);
         }
+
+        b.initSets(dictionaries);
 
         return instance;
     }
@@ -145,6 +143,28 @@
         },
 
         /**
+         * Adds sets to instanse
+         *
+         * @private
+         * @param {object} sets - Object with dictionaries
+         */
+        initSets: function(sets) {
+            var b = this;
+
+            if (sets) {
+                for (var key in sets) {
+                    if (sets.hasOwnProperty(key)) {
+                        b.direct[key] = b.mergeSets(
+                            b.direct.defaultDictionary,
+                            b.getUpperCaseDictionary(sets[key]),
+                            sets[key]
+                        );
+                    }
+                }
+            }
+        },
+
+        /**
          * Translates string
          *
          * @param {string} str - String
@@ -152,6 +172,11 @@
          * @returns {string|object}
          */
         translate: function(str, setName) {
+            if (setName !== undefined && !this.direct[setName]) {
+                console.warn('Unknown dictionary');
+                return str;
+            }
+
             return this.translateDirect(str, setName);
         },
 
