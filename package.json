@@ -1,0 +1,30 @@
+{
+  "name": "bunin",
+  "version": "1.0.0",
+  "description": "JavaScript transliteration tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Chaptykov/bunin.git"
+  },
+  "keywords": [
+    "translit",
+    "transliteration",
+    "js"
+  ],
+  "author": "Tim Chaptykov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Chaptykov/bunin/issues"
+  },
+  "homepage": "https://github.com/Chaptykov/bunin",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-concat": "^2.5.2",
+    "gulp-jshint": "^1.11.0",
+    "gulp-uglify": "^1.2.0"
+  }
+}
