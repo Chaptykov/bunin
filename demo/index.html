@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bunin — JavaScript transliteration tool</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <header>
+            <h1>Bunin demo</h1>
+            <div>
+                Transliteration inside browser.
+            </div>
+        </header>
+
+        <section class="example">
+            <h2>Default dictionary</h2>
+            <div class="split">
+                <div>
+                    <div class="input-wrapper">
+                        <textarea name="default-source" id="default-source">
+В окно я вижу груды облаков,
+Холодных, белоснежных, как зимою,
+И яркость неба влажно-голубого.
+Осенний полдень светел, и на север</textarea>
+                    </div>
+                </div>
+                <div>
+                    <div class="input-wrapper">
+                        <textarea name="default-target" id="default-target" disabled></textarea>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="example">
+            <h2>Transliteration with multiple dictionaries</h2>
+            <div class="split">
+                <div>
+                    <div class="input-wrapper">
+                        <textarea name="multiple-source" id="multiple-source">
+Щавель, йод и южная июльская тишина.</textarea>
+                    </div>
+                </div>
+                <div>
+                    <div class="input-wrapper">
+                        <textarea name="multiple-target" id="multiple-target" disabled></textarea>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="example">
+            <h2>Keyboard dictionary</h2>
+            <div class="split">
+                <div>
+                    <div class="input-wrapper">
+                        <textarea name="keyboard-source" id="keyboard-source">
+Rf;tncz? gjhf gthtrk.xbnm hfcrkflre</textarea>
+                    </div>
+                </div>
+                <div>
+                    <div class="input-wrapper">
+                        <textarea name="keyboard-target" id="keyboard-target" disabled></textarea>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="../dist/bunin.js"></script>
+    <script src="../dist/translit.bunin.js"></script>
+    <script src="../dist/keyboard.bunin.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

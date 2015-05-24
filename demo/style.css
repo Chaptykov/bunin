@@ -1,0 +1,79 @@
+body {
+    margin: auto;
+    max-width: 760px;
+    width: 100%;
+    font: 16px/24px Helvetica, Arial, sans-serif;
+}
+
+.wrapper {
+    padding: 0 20px;
+}
+
+header {
+    padding: 0 0 1em;
+}
+
+h1 {
+    margin: .5em 0 .2em;
+    font: 2em/1 Helvetica, Arial, sans-serif;
+}
+
+h2 {
+    margin: 0 0 .4em;
+    font: 1.2em/1 Helvetica, Arial, sans-serif;
+}
+
+.example {
+    margin: 0 -10px 2em;
+    padding: 10px;
+    border-radius: 4px;
+    background: #efefef;
+}
+
+/* Split */
+.split {
+    position: relative;
+    margin-right: 50%;
+}
+.split:after {
+    display: table;
+    clear: both;
+    content: '';
+}
+.split > div {
+    position: relative;
+    left: 100%;
+    float: left;
+    margin: 0 -100% 0 0;
+    width: 100%;
+}
+.split > div:first-child {
+    left: 0;
+    margin-left: 0;
+}
+
+/* Textarea */
+.input-wrapper {
+    margin-right: 13px;
+}
+textarea {
+    position: relative;
+    padding: 4px 6px;
+    min-height: 100px;
+    max-width: 100%;
+    width: 100%;
+    border: 1px solid #ddd;
+    background: #fff;
+    vertical-align: top;
+    font: 1em/1.2 Helvetica, Arial, sans-serif;
+    resize: none;
+}
+textarea:focus {
+    z-index: 1;
+}
+
+#multiple-source,
+#multiple-target {
+    min-height: 310px;
+}
+
