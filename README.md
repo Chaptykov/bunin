@@ -1,2 +1,3 @@
-# bunin
-JavaScript transliteration tool
+# Bunin
+
+JavaScript transliteration tool.
