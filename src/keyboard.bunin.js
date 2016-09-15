@@ -66,7 +66,7 @@
         }
     }
 
-    if (module && module.exports) {
+    if (typeof module != 'undefined' && module && module.exports) {
         module.exports = BuninDictionaries;
     }
 })();

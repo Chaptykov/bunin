@@ -1,3 +1,5 @@
+;(function() {
+
 var defaultDictionary = {
     "u1072": "a",    // а
     "u1073": "b",    // б
@@ -236,6 +238,8 @@ if (typeof window != 'undefined') {
     window.Bunin = Bunin;
 }
 
-if (module && module.exports) {
+if (typeof module != 'undefined' && module && module.exports) {
     module.exports = Bunin;
 }
+
+})();
