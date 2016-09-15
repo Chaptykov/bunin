@@ -39,7 +39,7 @@ function Bunin(dictionaries) {
     var instance = this instanceof Bunin ? this : Object.create(Bunin.prototype), // @TODO Object.create
         b = instance;
 
-    b.direct = b.reverse = {};
+    b.direct = {};
     b.direct.defaultDictionary = b.mergeSets(defaultDictionary, b.getUpperCaseDictionary(defaultDictionary));
     b.data = {};
 
