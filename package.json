@@ -2,7 +2,7 @@
   "name": "bunin",
   "version": "1.0.0",
   "description": "JavaScript transliteration tool",
-  "main": "index.js",
+  "main": "src/bunin.js",
   "scripts": {
     "test": "test"
   },
