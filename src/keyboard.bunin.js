@@ -54,13 +54,19 @@
         }
     };
 
-    if (!window.BuninDictionaries) {
-        window.BuninDictionaries = {};
+    if (typeof window != 'undefined') {
+        if (!window.BuninDictionaries) {
+            window.BuninDictionaries = {};
+        }
+
+        for (var key in BuninDictionaries) {
+            if (BuninDictionaries.hasOwnProperty(key) && !window.BuninDictionaries[key]) {
+                window.BuninDictionaries[key] = BuninDictionaries[key];
+            }
+        }
     }
 
-    for (var key in BuninDictionaries) {
-        if (BuninDictionaries.hasOwnProperty(key)) {
-            window.BuninDictionaries[key] = BuninDictionaries[key];
-        }
+    if (module && module.exports) {
+        module.exports = BuninDictionaries;
     }
 })();

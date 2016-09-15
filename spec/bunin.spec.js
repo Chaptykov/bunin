@@ -150,6 +150,11 @@ describe('Bunin', function() {
     });
 
     describe('initSets', function() {
+        var translit;
+
+        before(function() {
+            translit = require('../src/translit.bunin.js');
+        });
 
         it('Simple', function() {
             var data = {
@@ -163,7 +168,17 @@ describe('Bunin', function() {
             compareProperties(expected, B.direct.testSet);
         });
 
+        it('CommonJS for dictionaries', function() {
+            assert.equal(typeof translit, 'object');
+            assert.ok(translit['BGN/PCGN']);
+            assert.ok(translit['ALA-LC']);
+            assert.ok(translit['GOST']);
+            assert.ok(translit['ISO/R 9']);
+            assert.ok(translit['ISO 9']);
+        });
+
         after(function() {
+
             B = new Bunin();
         });
 
