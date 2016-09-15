@@ -188,6 +188,21 @@ describe('Bunin', function() {
             compareProperties(expected, translated);
         });
 
+        it('Empty symbol', function() {
+            var B2 = new Bunin();
+
+            B2.initSets({
+                testEmpty: {
+                    "u1100": ""
+                }
+            });
+
+            var expected = 'Zhenshen',
+                translated = B2.translate('Женьшень', 'testEmpty');
+
+            compareProperties(translated, expected);
+        });
+
     });
 
     describe('translate', function() {

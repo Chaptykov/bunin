@@ -212,7 +212,9 @@ Bunin.prototype = {
 
         function translate(set) {
             return b.mapChar(str, function(chr) {
-                return set['u' + chr.charCodeAt(0)] || chr;
+                var res = set['u' + chr.charCodeAt(0)]
+
+                return typeof res == 'string' ? res : chr;
             });
         }
 
